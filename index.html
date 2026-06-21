@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History Vibe Timeline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="badge">Vibe Coding Project</p>
+    <h1>History Vibe Timeline</h1>
+    <p class="subtitle">세계사의 주요 사건을 시대별로 탐색하고, 퀴즈로 복습하는 인터랙티브 연표 웹앱</p>
+  </header>
+
+  <main>
+    <section class="panel intro">
+      <h2>프로젝트 소개</h2>
+      <p>
+        이 웹앱은 역사 공부를 할 때 사건을 단순 암기하는 것보다, 시간의 흐름 속에서 연결해 이해할 수 있도록 만든 연표형 학습 도구입니다.
+        사건 카드를 클릭하면 핵심 설명을 볼 수 있고, 지역 필터와 검색 기능을 통해 원하는 사건만 모아볼 수 있습니다.
+      </p>
+    </section>
+
+    <section class="panel controls">
+      <div>
+        <label for="searchInput">검색</label>
+        <input id="searchInput" type="text" placeholder="예: 몽골, 프랑스, 산업혁명" />
+      </div>
+      <div>
+        <label for="regionFilter">지역</label>
+        <select id="regionFilter">
+          <option value="all">전체</option>
+          <option value="동아시아">동아시아</option>
+          <option value="중동·이슬람권">중동·이슬람권</option>
+          <option value="유럽">유럽</option>
+          <option value="세계사">세계사</option>
+        </select>
+      </div>
+      <button id="resetBtn">초기화</button>
+    </section>
+
+    <section class="stats">
+      <article><strong id="eventCount">0</strong><span>표시된 사건</span></article>
+      <article><strong id="oldestYear">-</strong><span>가장 이른 연도</span></article>
+      <article><strong id="latestYear">-</strong><span>가장 늦은 연도</span></article>
+    </section>
+
+    <section class="timeline" id="timeline"></section>
+
+    <section class="panel quiz">
+      <h2>랜덤 복습 퀴즈</h2>
+      <p id="quizQuestion">버튼을 눌러 퀴즈를 시작하세요.</p>
+      <div class="quiz-actions">
+        <button id="quizBtn">문제 내기</button>
+        <button id="answerBtn">정답 보기</button>
+      </div>
+      <p id="quizAnswer" class="answer"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for GitHub Pages · History Department Vibe Coding Assignment</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
